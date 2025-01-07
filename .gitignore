@@ -1,0 +1,40 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Unity asset metadata
+[Aa]ssets/**/*.meta
+
+# Crash reports
+*.pidb.meta
+*.pidb
+*.mdb
+*.opendb
+
+# Visual Studio
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.userprefs
+*.user
+*.pidb
+*.booproj
+*.svd
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Build files
+*.apk
+*.aab
