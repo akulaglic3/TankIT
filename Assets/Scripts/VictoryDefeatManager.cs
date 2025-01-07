@@ -72,8 +72,7 @@ public class VictoryDefeatManager : MonoBehaviour
         if (didWin)
         {
             PlayOutcomeMusic(victoryMusic);
-            PlayBadgeAnimation(victoryBadge, victoryAnimator, victoryAnimationName);
-            MoveCameraToPoint(victoryCameraPoint);
+            StartCoroutine(DelayedVictoryOutcome(victoryCameraPoint, victoryBadge, victoryAnimator, victoryAnimationName));
         }
         else
         {
@@ -84,6 +83,16 @@ public class VictoryDefeatManager : MonoBehaviour
 
         StartCoroutine(AllowTransitionAfterDelay());
     }
+
+    private IEnumerator DelayedVictoryOutcome(Transform targetPoint, GameObject badge, Animator animator, string animationName)
+    {
+        yield return new WaitForSeconds(3f); // Wait for 3 seconds
+        MoveCameraToPoint(targetPoint);
+
+        // Display the victory badge after the camera switch
+        PlayBadgeAnimation(badge, animator, animationName);
+    }
+
 
     private void PlayBadgeAnimation(GameObject badge, Animator animator, string animationName)
     {
